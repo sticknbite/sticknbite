@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SticknBite Brand Colors */
+    --background: 30 50% 96%;
+    --foreground: 15 35% 15%;
+
+    --card: 30 40% 98%;
+    --card-foreground: 15 35% 15%;
+
+    --popover: 30 40% 98%;
+    --popover-foreground: 15 35% 15%;
+
+    /* Dark brown - header/primary */
+    --primary: 15 35% 18%;
+    --primary-foreground: 30 40% 96%;
+
+    /* Cream beige - secondary */
+    --secondary: 30 35% 92%;
+    --secondary-foreground: 15 35% 18%;
+
+    --muted: 30 25% 90%;
+    --muted-foreground: 15 20% 45%;
+
+    /* Gold/amber - accent */
+    --accent: 35 80% 50%;
+    --accent-foreground: 15 35% 15%;
+
+    /* Coral/orange - CTA */
+    --destructive: 25 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 25% 85%;
+    --input: 30 25% 85%;
+    --ring: 35 80% 50%;
+
+    --radius: 0.5rem;
+
+    /* Custom brand colors */
+    --coral: 25 85% 55%;
+    --gold: 35 80% 50%;
+    --gold-light: 38 75% 65%;
+    --brown-dark: 15 35% 18%;
+    --brown-medium: 15 30% 30%;
+    --cream: 30 50% 96%;
+    --cream-dark: 30 35% 90%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(38, 75%, 65%) 0%, hsl(35, 80%, 50%) 100%);
+    --gradient-coral: linear-gradient(135deg, hsl(30, 85%, 60%) 0%, hsl(25, 85%, 55%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(30, 50%, 96%) 0%, hsl(30, 35%, 92%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(15 35% 18% / 0.1);
+    --shadow-elevated: 0 12px 40px -8px hsl(15 35% 18% / 0.15);
+    --shadow-gold: 0 8px 30px -6px hsl(35 80% 50% / 0.35);
+
+    --sidebar-background: 30 40% 98%;
+    --sidebar-foreground: 15 35% 25%;
+    --sidebar-primary: 15 35% 18%;
+    --sidebar-primary-foreground: 30 40% 96%;
+    --sidebar-accent: 30 30% 94%;
+    --sidebar-accent-foreground: 15 35% 18%;
+    --sidebar-border: 30 25% 88%;
+    --sidebar-ring: 35 80% 50%;
+  }
+
+  .dark {
+    --background: 15 35% 10%;
+    --foreground: 30 40% 96%;
+
+    --card: 15 30% 14%;
+    --card-foreground: 30 40% 96%;
+
+    --popover: 15 30% 14%;
+    --popover-foreground: 30 40% 96%;
+
+    --primary: 30 40% 96%;
+    --primary-foreground: 15 35% 18%;
+
+    --secondary: 15 25% 20%;
+    --secondary-foreground: 30 40% 96%;
+
+    --muted: 15 25% 18%;
+    --muted-foreground: 30 20% 65%;
+
+    --accent: 35 80% 50%;
+    --accent-foreground: 15 35% 10%;
+
+    --destructive: 25 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 15 25% 22%;
+    --input: 15 25% 22%;
+    --ring: 35 80% 50%;
+
+    --sidebar-background: 15 30% 12%;
+    --sidebar-foreground: 30 35% 90%;
+    --sidebar-primary: 35 80% 50%;
+    --sidebar-primary-foreground: 15 35% 10%;
+    --sidebar-accent: 15 25% 18%;
+    --sidebar-accent-foreground: 30 35% 90%;
+    --sidebar-border: 15 25% 20%;
+    --sidebar-ring: 35 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(38, 75%, 65%) 0%, hsl(35, 80%, 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(38, 75%, 65%) 0%, hsl(35, 80%, 50%) 100%);
+  }
+
+  .bg-gradient-coral {
+    background: linear-gradient(135deg, hsl(30, 85%, 60%) 0%, hsl(25, 85%, 55%) 100%);
+  }
+
+  .bg-gradient-warm {
+    background: linear-gradient(180deg, hsl(30, 50%, 96%) 0%, hsl(30, 35%, 92%) 100%);
+  }
+
+  .shadow-gold {
+    box-shadow: 0 8px 30px -6px hsl(35 80% 50% / 0.35);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px -4px hsl(15 35% 18% / 0.1);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 12px 40px -8px hsl(15 35% 18% / 0.15);
+  }
+}
