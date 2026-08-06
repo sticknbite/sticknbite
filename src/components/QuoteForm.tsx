@@ -131,7 +131,7 @@ const QuoteForm = () => {
         page_url: window.location.href,
       };
 
-      await fetch("https://hook.us1.make.com/8x6i8jk6991n9uhwrmcuwmy1w5t9fq2t", {
+      await fetch("https://hook.us2.make.com/qckfhoei6utvr1ps1pp7fv7qhw95bb6v", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
