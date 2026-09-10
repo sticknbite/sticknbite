@@ -116,8 +116,8 @@ const QuoteForm = () => {
 
     // Validate minimum guests
     const guestsNum = parseInt(formData.guests, 10);
-    if (isNaN(guestsNum) || guestsNum < 20) {
-      setErrors({ guests: "Minimum 20 guests required" });
+    if (isNaN(guestsNum) || guestsNum < 30) {
+      setErrors({ guests: "Minimum 30 guests required" });
       return;
     }
 
@@ -236,16 +236,16 @@ const QuoteForm = () => {
 
             <div>
               <Label htmlFor="guests" className="text-foreground">
-                Number of guests (minimum 20) <span className="text-coral">*</span>
+                Number of guests (minimum 30) <span className="text-coral">*</span>
               </Label>
               <Input
                 id="guests"
                 type="number"
-                min="20"
+                min="30"
                 value={formData.guests}
                 onChange={(e) => handleChange("guests", e.target.value)}
                 className="mt-1 bg-secondary/50 border-secondary"
-                placeholder="20"
+                placeholder="30"
               />
               {errors.guests && <p className="text-coral text-sm mt-1">{errors.guests}</p>}
             </div>

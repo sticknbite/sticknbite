@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -112,7 +113,12 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="border-t border-border py-6 text-center text-sm text-muted-foreground">
-        © All Rights Reserved: STICKNBITE
+        <p>© All Rights Reserved: STICKNBITE</p>
+        <p className="mt-2">
+          <Link to="/privacy" className="hover:text-gold transition-colors">
+            Privacy Policy
+          </Link>
+        </p>
       </div>
     </footer>
   );
